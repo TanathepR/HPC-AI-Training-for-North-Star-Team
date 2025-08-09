@@ -67,6 +67,8 @@ mpicc -O3 -march=native myprogram.c -o myprogram
 ```
 ---
 
+## การติดตั้งโปรแกรม OSU Benchmark ด้วย GNU Compiler และ OpenMPI
+
 ## 📥 Step 1 — Download Source Code
 
 ```bash
