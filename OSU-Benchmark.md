@@ -21,7 +21,7 @@
 - **Intel Compiler (ICC/ICPC/IFORT)** — ถูกปรับแต่งให้เหมาะกับสถาปัตยกรรม Intel ทำให้บางงานคำนวณเร็วขึ้น
   - ตัวอย่าง:  
     ```bash
-    module load intel-compiler
+    module load intel
     ```
   - คำสั่งเรียก compiler:
     - `icc` (C)
