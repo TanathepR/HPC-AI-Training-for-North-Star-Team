@@ -249,3 +249,65 @@ make install
    * ติดตั้งไฟล์ที่คอมไพล์เสร็จแล้วไปยัง path ที่กำหนดใน `--prefix`
 
 ---
+## ▶️ Step 4 — การรัน Bash Script
+
+หลังจากสร้างและแก้ไขไฟล์ `build.sh` เรียบร้อยแล้ว  
+เราสามารถรันสคริปต์เพื่อทำขั้นตอนการ build และติดตั้งโปรแกรมได้
+
+### วิธีการรัน Bash Script
+
+1. **รันด้วยคำสั่ง `bash` หรือ `sh`**  
+   ```bash
+   bash build.sh
+````
+
+หรือ
+
+```bash
+sh build.sh
+```
+
+* รันสคริปต์ใน shell ใหม่ (subshell)
+* การเปลี่ยนแปลง environment ภายในสคริปต์จะไม่ส่งผลต่อ shell ปัจจุบัน
+
+2. **รันด้วยคำสั่ง `.` (dot command) หรือ `source`**
+
+   ```bash
+   . build.sh
+   ```
+
+   หรือ
+
+   ```bash
+   source build.sh
+   ```
+
+   * รันสคริปต์ใน shell ปัจจุบัน
+   * การเปลี่ยนแปลง environment เช่น การโหลด module หรือการตั้งค่า environment variables จะส่งผลใน shell ปัจจุบันทันที
+   * เหมาะสำหรับกรณีที่ต้องการโหลด module หรือเซ็ต environment สำหรับคำสั่งถัดไป
+
+---
+
+### ตัวอย่างการรัน
+
+```bash
+. build.sh
+```
+
+หรือ
+
+```bash
+source build.sh
+```
+
+---
+
+### หมายเหตุ
+
+* ถ้าต้องการรันสคริปต์โดยตรง สามารถตั้งสิทธิ์ execute แล้วรันได้เลย
+
+  ```bash
+  chmod +x build.sh
+  ./build.sh
+  ```
+* แต่การรันด้วย `.` หรือ `source` จะเหมาะกับการโหลด module หรือ environment variables ที่ต้องใช้ต่อใน shell ปัจจุบัน
