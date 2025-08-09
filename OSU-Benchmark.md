@@ -1,4 +1,4 @@
-a# Building OSU Micro-Benchmarks from Source on LANTA HPC
+# Building OSU Micro-Benchmarks from Source on LANTA HPC
 ## 📌 Overview
 [OSU Benchmarks (OSU)](https://mvapich.cse.ohio-state.edu/benchmarks) เป็นชุดเครื่องมือทดสอบประสิทธิภาพ MPI และ OpenSHMEM ที่นิยมใช้วัดค่าความหน่วง (latency), แบนด์วิดท์ (bandwidth) และประสิทธิภาพการสื่อสารของระบบ HPC เช่น Point-to-point MPI benchmarks และ One-sided MPI benchmarks
 
