@@ -15,18 +15,18 @@
     module load gcc
     ```
   - คำสั่งเรียก compiler:
-    - `gcc` (C)
-    - `g++` (C++)
-    - `gfortran` (Fortran)
+    - `gcc` (สำหรับภาษา C)
+    - `g++` (สำหรับภาษา C++)
+    - `gfortran` (สำหรับภาษา Fortran)
 - **Intel Compiler (ICC/ICPC/IFORT)** — ถูกออกแบบมาสำหรับ CPU ที่เป็น Intel ทำให้บางงานอาจคำนวณเร็วขึ้น
   - ตัวอย่าง:  
     ```bash
     module load intel
     ```
   - คำสั่งเรียก compiler:
-    - `icc` (C)
-    - `icpc` (C++)
-    - `ifort` (Fortran)
+    - `icc` (สำหรับภาษา C)
+    - `icpc` (สำหรับภาษา C++)
+    - `ifort` (สำหรับภาษา Fortran)
 
 ### 2. MPI Compiler Wrappers
 เมื่อโหลดโมดูล MPI แล้ว เช่น OpenMPI หรือ Intel MPI จะมี wrapper ให้ใช้งาน:
