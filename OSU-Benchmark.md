@@ -30,6 +30,7 @@
 
 ### 2. MPI Compiler Wrappers
 เมื่อโหลดโมดูล MPI แล้ว เช่น OpenMPI หรือ Intel MPI จะมี wrapper ให้ใช้งาน:
+
 ตัวอย่างเมื่อทำการ module load OpenMPI
 - `mpicc` → สำหรับภาษา C
 - `mpicxx` หรือ `mpiCC` → สำหรับภาษา C++
