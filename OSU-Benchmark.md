@@ -15,18 +15,18 @@
     module load gcc
     ```
   - คำสั่งเรียก compiler:
-    - `CC=gcc` (C)
-    - `CXX=g++` (C++)
-    - `FC=gfortran` (Fortran)
-- **Intel Compiler (ICC/ICPC/IFORT)** — ปรับแต่งให้เหมาะกับสถาปัตยกรรม Intel ทำให้บางงานวิ่งเร็วขึ้น
+    - `gcc` (C)
+    - `g++` (C++)
+    - `gfortran` (Fortran)
+- **Intel Compiler (ICC/ICPC/IFORT)** — ถูกปรับแต่งให้เหมาะกับสถาปัตยกรรม Intel ทำให้บางงานคำนวณเร็วขึ้น
   - ตัวอย่าง:  
     ```bash
     module load intel-compiler
     ```
   - คำสั่งเรียก compiler:
-    - `CC=icc` (C)
-    - `CXX=icpc` (C++)
-    - `FC=ifort` (Fortran)
+    - `icc` (C)
+    - `icpc` (C++)
+    - `ifort` (Fortran)
 
 ### 2. MPI Compiler Wrappers
 เมื่อโหลดโมดูล MPI แล้ว เช่น OpenMPI หรือ Intel MPI จะมี wrapper ให้ใช้งาน:
