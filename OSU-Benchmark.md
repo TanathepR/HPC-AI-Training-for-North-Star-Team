@@ -8,7 +8,7 @@
 
 บนระบบ HPC เช่น LANTA, GADI, ASPIRE-2A และอื่น ๆ การ compile โปรแกรมมีความแตกต่างจากบนคอมพิวเตอร์ส่วนบุคคล เพราะต้องพิจารณาเรื่องสถาปัตยกรรมของเครื่อง (Computer Architecture), ระบบจัดการ job (Job Scheduler), และการใช้โมดูล (modules) ให้ถูกต้อง
 
-### 1. Compiler Modules
+### 1. Compiler
 - **GNU Compiler (GCC)** — เปิดกว้าง, ฟรี, ใช้งานทั่วไป, รองรับ MPI/OpenMP
   - ตัวอย่าง: `module load compiler/gnu/11.3.0`
 - **Intel Compiler (ICC/ICPC/IFORT)** — ปรับแต่งให้เหมาะกับสถาปัตยกรรม Intel ทำให้บางงานวิ่งเร็วขึ้น
