@@ -18,7 +18,7 @@
     - `gcc` (C)
     - `g++` (C++)
     - `gfortran` (Fortran)
-- **Intel Compiler (ICC/ICPC/IFORT)** — ถูกปรับแต่งให้เหมาะกับ CPU ที่เป็น Intel ทำให้บางงานคำนวณเร็วขึ้น
+- **Intel Compiler (ICC/ICPC/IFORT)** — เหมาะกับ CPU ที่เป็น Intel ทำให้บางงานคำนวณเร็วขึ้น
   - ตัวอย่าง:  
     ```bash
     module load intel
