@@ -13,7 +13,6 @@
   - ตัวอย่าง: `module load compiler/gnu/11.3.0`
 - **Intel Compiler (ICC/ICPC/IFORT)** — ปรับแต่งให้เหมาะกับสถาปัตยกรรม Intel ทำให้บางงานวิ่งเร็วขึ้น
   - ตัวอย่าง: `module load compiler/intel`
-- **MPI Compiler Wrappers** — คำสั่งอย่าง `mpicc`, `mpicxx`, `mpif90` จะใช้ compiler ที่เหมาะกับ MPI เวอร์ชันที่โหลด
 
 ### 2. MPI Compiler Wrappers
 เมื่อโหลดโมดูล MPI แล้ว เช่น OpenMPI หรือ Intel MPI จะมี wrapper ให้ใช้งาน:
