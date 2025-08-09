@@ -10,15 +10,27 @@
 
 ### 1. Compiler
 - **GNU Compiler (GCC)** — เปิดกว้าง, ฟรี, ใช้งานทั่วไป, รองรับ MPI/OpenMP
-  - ตัวอย่าง: `module load compiler/gnu/11.3.0`
+  - ตัวอย่าง: `module load gcc
 - **Intel Compiler (ICC/ICPC/IFORT)** — ปรับแต่งให้เหมาะกับสถาปัตยกรรม Intel ทำให้บางงานวิ่งเร็วขึ้น
-  - ตัวอย่าง: `module load compiler/intel`
+  - ตัวอย่าง: `module load intel-compiler`
 
 ### 2. MPI Compiler Wrappers
 เมื่อโหลดโมดูล MPI แล้ว เช่น OpenMPI หรือ Intel MPI จะมี wrapper ให้ใช้งาน:
+ตัวอย่างเมื่อทำการ module load OpenMPI
+สามารถลองใช้คำสั่งเพื่อแสดงรายละเอียดของ module นั้นได้ด้วยคำสั่ง
+```bash
+module show OpenMPI
+```
+
 - `mpicc` → สำหรับภาษา C
 - `mpicxx` หรือ `mpiCC` → สำหรับภาษา C++
 - `mpif90` หรือ `mpifort` → สำหรับ Fortran  
+Wrapper จะตั้ง include paths และ link libraries ให้อัตโนมัติ
+
+หรือตัวอย่างเมื่อทำการ module load Intel-mpi
+- `mpiicc` → สำหรับภาษา C
+- `mpiicpc` หรือ `mpiCC` → สำหรับภาษา C++
+- `mpiifort` หรือ `mpifort` → สำหรับ Fortran  
 Wrapper จะตั้ง include paths และ link libraries ให้อัตโนมัติ
 
 ### 3. การ Compile ให้เหมาะกับ HPC
