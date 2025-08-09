@@ -217,9 +217,9 @@ make install
 
    * Shebang line เพื่อบอกระบบว่า script นี้ให้รันด้วย Bash shell
 
-2. **`module load gcc`**
+2. **`module load gcc` และ `module load OpenMPI`**
 
-   * โหลด GCC compiler module จาก environment ของ HPC
+   * โหลด GCC compiler และ MPI module จาก environment ของ HPC
    * จำเป็นเพราะ HPC บางระบบไม่ได้ติดตั้ง GCC ใน path เริ่มต้น
 
 3. **`./configure CC=mpicc FC=mpifrt CXX=mpicxx \`**
