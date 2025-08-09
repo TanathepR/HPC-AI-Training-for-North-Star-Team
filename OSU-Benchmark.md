@@ -259,13 +259,12 @@ make install
 1. **รันด้วยคำสั่ง `bash` หรือ `sh`**  
    ```bash
    bash build.sh
-```
+   ```
 
-หรือ
-
-```bash
-sh build.sh
-```
+   หรือ
+   ```bash
+   sh build.sh
+   ```
 
 * รันสคริปต์ใน shell ใหม่ (subshell)
 * การเปลี่ยนแปลง environment ภายในสคริปต์จะไม่ส่งผลต่อ shell ปัจจุบัน
