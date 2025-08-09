@@ -87,6 +87,11 @@ make install
 * `-j 4` เป็นตัวเลือกเพื่อให้ `make` รันงานแบบ parallel โดยใช้ 4 threads เพื่อให้ compile เร็วขึ้น
 * `make install` ใช้ติดตั้งไปยัง path ที่กำหนด
 
+เรายังสามารถดู option ของไฟล์ `configure` ได้ด้วยคำสั่ง
+```bash
+./configure --help
+```
+
 ---
 
 ### 2. ใช้ `cmake` + `make`
