@@ -38,9 +38,9 @@
 Wrapper จะตั้ง include paths และ link libraries ให้อัตโนมัติ
 
 หรือตัวอย่างเมื่อทำการ module load Intel-mpi
-- `mpiicc` → สำหรับภาษา C
-- `mpiicpc` หรือ `mpiCC` → สำหรับภาษา C++
-- `mpiifort` หรือ `mpifort` → สำหรับภาษา Fortran  
+- `mpiicc` (สำหรับภาษา C)
+- `mpiicpc` หรือ `mpiCC` (สำหรับภาษา C++)
+- `mpiifort` หรือ `mpifort` (สำหรับภาษา Fortran)  
 Wrapper จะตั้ง include paths และ link libraries ให้อัตโนมัติ
 
 ### 3. การ Compile ให้เหมาะกับ HPC
