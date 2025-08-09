@@ -32,9 +32,9 @@
 เมื่อโหลดโมดูล MPI แล้ว เช่น OpenMPI หรือ Intel MPI จะมี wrapper ให้ใช้งาน:
 
 ตัวอย่างเมื่อทำการ module load OpenMPI
-- `mpicc` → สำหรับภาษา C
-- `mpicxx` หรือ `mpiCC` → สำหรับภาษา C++
-- `mpif90` หรือ `mpifort` → สำหรับภาษา Fortran  
+- `mpicc` (สำหรับภาษา C)
+- `mpicxx` หรือ `mpiCC` (สำหรับภาษา C++)
+- `mpif90` หรือ `mpifort` (สำหรับภาษา Fortran) 
 Wrapper จะตั้ง include paths และ link libraries ให้อัตโนมัติ
 
 หรือตัวอย่างเมื่อทำการ module load Intel-mpi
