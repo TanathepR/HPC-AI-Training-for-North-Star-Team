@@ -35,13 +35,12 @@
 - `mpicc` (สำหรับภาษา C)
 - `mpicxx` หรือ `mpiCC` (สำหรับภาษา C++)
 - `mpif90` หรือ `mpifort` (สำหรับภาษา Fortran)
-
 Wrapper จะตั้ง include paths และ link libraries ให้อัตโนมัติ
 
 หรือตัวอย่างเมื่อทำการ `module load Intel-mpi` (ใน LANTA ไม่มี แต่ใน GADI มี)
 - `mpiicc` (สำหรับภาษา C)
 - `mpiicpc` (สำหรับภาษา C++)
-- `mpiifort` (สำหรับภาษา Fortran)  
+- `mpiifort` (สำหรับภาษา Fortran)
 Wrapper จะตั้ง include paths และ link libraries ให้อัตโนมัติ
 
 ### 3. การ Compile โปรแกรมให้เหมาะกับ HPC
