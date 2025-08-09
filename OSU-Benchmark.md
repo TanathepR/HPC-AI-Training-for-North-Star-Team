@@ -72,7 +72,7 @@ mpicc -O3 -march=native myprogram.c -o myprogram
 ### 1. ใช้ `configure` + `make`
 
 ใช้ในซอฟต์แวร์ที่รองรับ GNU Autotools ซึ่งจะมีไฟล์ชื่อ configure และ Makefile โดยภายใน Makefile จะประกอบไปด้วย configurations สำหรับ compile และ links dependencies ที่ต้องการ
-ขั้นตอนทั่วไปสำหรับใช้ bash script:
+ขั้นตอนทั่วไปสำหรับใช้ bash script เช่น:
 
 ```bash
 #!/bin/bash
@@ -91,8 +91,7 @@ make install
 
 ### 2. ใช้ `cmake` + `make`
 
-ใช้ในซอฟต์แวร์ที่ใช้ CMake เป็น build system ซึ่งจะมีไฟล์ชื่อ CMakeLists และ โฟลเดอร์ชื่อ Cmake
-ขั้นตอนทั่วไป:
+ใช้ในซอฟต์แวร์ที่ใช้ CMake เป็น build system ซึ่งจะมีไฟล์ชื่อ CMakeLists และ โฟลเดอร์ชื่อ Cmake ขั้นตอนทั่วไป เช่น:
 
 ```bash
 #!/bin/bash
