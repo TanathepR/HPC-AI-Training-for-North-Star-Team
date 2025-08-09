@@ -199,7 +199,7 @@ module load gcc
 module load OpenMPI
 
 # รัน configure พร้อมกำหนด MPI compiler wrapper และ path ติดตั้ง
-./configure CC=mpicc FC=mpifrt CXX=mpicxx \
+./configure CC=mpicc FC=mpifort CXX=mpicxx \
 --prefix=$HOME/app/osu-benchmark
 
 # คอมไพล์ด้วย make พร้อมใช้ 4 threads
@@ -222,12 +222,12 @@ make install
    * โหลด GCC compiler และ MPI module จาก environment ของ HPC
    * จำเป็นเพราะ HPC บางระบบไม่ได้ติดตั้ง GCC ใน path เริ่มต้น
 
-3. **`./configure CC=mpicc FC=mpifrt CXX=mpicxx \`**
-
-   * สั่งรันสคริปต์ `configure` ของโปรแกรม
-   * **`CC=mpicc`** → ตั้งค่า C compiler ให้เป็น `mpicc` (MPI C wrapper)
-   * **`FC=mpifrt`** → ตั้งค่า Fortran compiler ให้เป็น `mpifrt` (MPI Fortran wrapper)
-   * **`CXX=mpicxx`** → ตั้งค่า C++ compiler ให้เป็น `mpicxx` (MPI C++ wrapper)
+3. **`./configure CC=mpicc FC=mpifort CXX=mpicxx \`**  
+   - รันสคริปต์ `configure` เพื่อเตรียมไฟล์ Makefile สำหรับการคอมไพล์  
+   - **`CC`** คือ environment variable ที่กำหนดว่าโปรแกรมจะใช้ **C compiler** ตัวใดในการคอมไพล์โค้ดภาษา C  
+     - ที่นี่ตั้งเป็น `mpicc` ซึ่งเป็น **MPI C compiler wrapper** ที่ช่วยตั้งค่า compiler flags และ include paths สำหรับ MPI อัตโนมัติ  
+   - **`FC`** คือ environment variable สำหรับ **Fortran compiler** โดยตั้งเป็น `mpifort` (MPI Fortran wrapper)  
+   - **`CXX`** คือ environment variable สำหรับ **C++ compiler** โดยตั้งเป็น `mpicxx` (MPI C++ wrapper)
 
 4. **`--prefix=$HOME/app/osu-benchmark`**
 
