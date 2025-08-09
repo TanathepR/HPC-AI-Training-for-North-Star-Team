@@ -194,8 +194,9 @@ touch build.sh
 ```bash
 #!/bin/bash
 
-# โหลด module GCC compiler
+# โหลด module GCC compiler และ OpenMPI
 module load gcc
+module load OpenMPI
 
 # รัน configure พร้อมกำหนด MPI compiler wrapper และ path ติดตั้ง
 ./configure CC=mpicc FC=mpifrt CXX=mpicxx \
