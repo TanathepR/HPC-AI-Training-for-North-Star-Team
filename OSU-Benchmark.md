@@ -259,7 +259,7 @@ make install
 1. **รันด้วยคำสั่ง `bash` หรือ `sh`**  
    ```bash
    bash build.sh
-````
+```
 
 หรือ
 
