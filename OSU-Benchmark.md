@@ -287,7 +287,6 @@ make install
 
 ---
 ### หมายเหตุ
-
 * ถ้าต้องการรันสคริปต์โดยตรง สามารถตั้งสิทธิ์ execute แล้วรันได้เลย
 
   ```bash
@@ -295,3 +294,14 @@ make install
   ./build.sh
   ```
 * แต่การรันด้วย `.` หรือ `source` จะเหมาะกับการโหลด module หรือ environment variables ที่ต้องใช้ต่อใน shell ปัจจุบัน
+
+---
+## Step 5 — ตรวจสอบการ build software และ run simple benchmark
+หลังจากติดตั้งโปรแกรมเสร็จสิ้นแล้ว ควรตรวจสอบว่าโปรแกรมถูกติดตั้งและทำงานได้อย่างถูกต้อง โดยการรันโปรแกรมตัวอย่างหรือ benchmark แบบง่าย ๆ
+### 1. ตรวจสอบไฟล์ Binary ที่ติดตั้ง  
+ตรวจสอบว่าไฟล์ executable ถูกติดตั้งใน path ที่กำหนดไว้ (`$HOME/app/osu-benchmark/bin` หรือโฟลเดอร์ที่คุณระบุ)
+
+
+```bash
+tree $HOME/app/osu-benchmark/
+```
