@@ -33,13 +33,13 @@
 ตัวอย่างเมื่อทำการ module load OpenMPI
 - `mpicc` → สำหรับภาษา C
 - `mpicxx` หรือ `mpiCC` → สำหรับภาษา C++
-- `mpif90` หรือ `mpifort` → สำหรับ Fortran  
+- `mpif90` หรือ `mpifort` → สำหรับภาษา Fortran  
 Wrapper จะตั้ง include paths และ link libraries ให้อัตโนมัติ
 
 หรือตัวอย่างเมื่อทำการ module load Intel-mpi
 - `mpiicc` → สำหรับภาษา C
 - `mpiicpc` หรือ `mpiCC` → สำหรับภาษา C++
-- `mpiifort` หรือ `mpifort` → สำหรับ Fortran  
+- `mpiifort` หรือ `mpifort` → สำหรับภาษา Fortran  
 Wrapper จะตั้ง include paths และ link libraries ให้อัตโนมัติ
 
 ### 3. การ Compile ให้เหมาะกับ HPC
