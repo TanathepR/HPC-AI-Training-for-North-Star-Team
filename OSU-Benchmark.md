@@ -189,7 +189,7 @@ mkdir -p $HOME/app
 touch build.sh
 ```
 
-เปิดไฟล์ `build.sh` ด้วย text editor เช่น `nano` หรือ `vi` แล้วใส่เนื้อหาตามนี้:
+เปิดไฟล์ `build.sh` ด้วย text editor เช่น `nano` หรือ `vim` แล้วใส่เนื้อหาตามนี้:
 
 ```bash
 #!/bin/bash
