@@ -367,7 +367,11 @@ srun -n 2 $HOME/app/osu-benchmark/mpi/pt2pt/osu_latency
 ...
 ```
 
-
 นั่นแปลว่าการติดตั้งสมบูรณ์และสามารถใช้งาน benchmark ต่อไปได้ หากต้องการ benchmark เพิ่มเติม แนะนำให้ใช้คำสั่ง `sinteract` เพื่อเข้าไปยัง compute node เพื่อสั่งรันงาน หรือ สร้าง job script และส่งงานไปรัน (*ทุกครั้งที่รันไม่ควรจะรันบน frontend)
 
 ---
+
+ลิงค์เพิ่มเติมสำหรับเรียนรู้เกี่ยวกับ Compilation และ Environment Variable บน Linux OS
+1. [Environment Variable in Linux](https://www.geeksforgeeks.org/linux-unix/environment-variables-in-linux-unix/)
+2. [Step of Compilation from medium](https://medium.com/@3681/steps-of-compilation-5c02935a3904)
+3. [Understanding C program Compilation Process from Youtube](https://www.youtube.com/watch?v=VDslRumKvRA)
