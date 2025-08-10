@@ -190,6 +190,21 @@ cat README
 mkdir -p $HOME/app
 ```
 
+ตรวจสอบรายการไฟล์ด้วยคำสั่ง `ls` หรือ `ll`
+```bash
+ll
+```
+
+เปิดอ่านไฟล์ `README` หรือ `INSTALL` หากมี
+```bash
+cat README
+```
+
+ดูรายละเอียด option ของ configure ได้ด้วย
+```bash
+./configure --help
+```
+
 สร้างไฟล์เปล่าชื่อ `build.sh` ด้วยคำสั่ง:
 
 ```bash
