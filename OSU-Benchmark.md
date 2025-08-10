@@ -347,7 +347,7 @@ libgcc_s.so.1 => /lib64/libgcc_s.so.1 (0x00007.......)
 เพื่อยืนยันว่า binary ใช้งานได้และ MPI ทำงานปกติ สามารถรันตัวอย่างเช่น **latency test**:
 
 ```bash
-srun -np 2 $HOME/app/osu-benchmark/mpi/pt2pt/osu_latency
+srun -n 2 $HOME/app/osu-benchmark/mpi/pt2pt/osu_latency
 ```
 
 ถ้า build และ environment ถูกต้อง จะได้ผลลัพธ์ลักษณะนี้:
