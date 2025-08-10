@@ -366,7 +366,8 @@ srun -np 2 $HOME/app/osu-benchmark/mpi/pt2pt/osu_latency
 128                     0.34
 ...
 ```
-
+```
 
 นั่นแปลว่าการติดตั้งสมบูรณ์และสามารถใช้งาน benchmark ต่อไปได้ หากต้องการ benchmark เพิ่มเติม แนะนำให้ใช้คำสั่ง `sinteract` เพื่อเข้าไปยัง compute node เพื่อสั่งรันงาน หรือ สร้าง job script และส่งงานไปรัน
+(*ทุกครั้งที่รันไม่ควรจะรันบน frontend)
 ---
