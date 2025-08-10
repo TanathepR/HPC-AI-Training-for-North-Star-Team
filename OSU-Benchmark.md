@@ -352,7 +352,7 @@ srun -n 2 $HOME/app/osu-benchmark/mpi/pt2pt/osu_latency
 
 ถ้า build และ environment ถูกต้อง จะได้ผลลัพธ์ลักษณะนี้:
 
-```
+```bash
 # OSU MPI Latency Test v7.5
 # Datatype: MPI_CHAR.
 # Size       Avg Latency(us)
@@ -365,7 +365,6 @@ srun -n 2 $HOME/app/osu-benchmark/mpi/pt2pt/osu_latency
 64                      0.33
 128                     0.34
 ...
-```
 ```
 
 
