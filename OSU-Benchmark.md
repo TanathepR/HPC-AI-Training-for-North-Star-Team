@@ -297,11 +297,76 @@ make install
 
 ---
 ## Step 5 — ตรวจสอบการ build software และ run simple benchmark
-หลังจากติดตั้งโปรแกรมเสร็จสิ้นแล้ว ควรตรวจสอบว่าโปรแกรมถูกติดตั้งและทำงานได้อย่างถูกต้อง โดยการรันโปรแกรมตัวอย่างหรือ benchmark แบบง่าย ๆ
-### 1. ตรวจสอบไฟล์ Binary ที่ติดตั้ง  
-ตรวจสอบว่าไฟล์ executable ถูกติดตั้งใน path ที่กำหนดไว้ (`$HOME/app/osu-benchmark/bin` หรือโฟลเดอร์ที่คุณระบุ)
 
+หลังจากติดตั้งโปรแกรมเสร็จสิ้นแล้ว ควรตรวจสอบว่าโปรแกรมถูกติดตั้งและสามารถทำงานได้อย่างถูกต้อง
+การตรวจสอบนี้มี 2 ส่วนหลัก ๆ คือ **(1) ตรวจสอบไฟล์ที่ติดตั้ง** และ **(2) ตรวจสอบความถูกต้องของการลิงค์ library** จากนั้นจึง **(3) ทดลองรัน benchmark ง่าย ๆ**
+
+---
+
+### 1. ตรวจสอบไฟล์ Binary ในโฟลเดอร์ปลายทางที่ตั้งค่า `--prefix`
+
+เมื่อเราทำการ `./configure --prefix=$HOME/app/osu-benchmark` และ `make install` ตัวไฟล์ executable และไฟล์อื่น ๆ จะถูกติดตั้งไปยังโฟลเดอร์ `$HOME/app/osu-benchmark/` (หรือ path ที่คุณกำหนดไว้)
+
+เพื่อให้มั่นใจว่าไฟล์ถูกติดตั้งครบและอยู่ในตำแหน่งที่ถูกต้อง ให้ใช้คำสั่ง:
 
 ```bash
 tree $HOME/app/osu-benchmark/
 ```
+
+ผลลัพธ์จะต้องมีไฟล์ binary อยู่ใน subdirectory เช่น `mpi/pt2pt/osu_latency` และอื่น ๆ
+
+---
+
+### 2. ตรวจสอบการลิงค์ไฟล์ด้วยคำสั่ง `ldd`
+
+ในขั้นตอนการ compile ไฟล์ executable จะถูก **link** เข้ากับ library ที่จำเป็นต่อการทำงาน
+
+* ถ้าเป็น **static linking** → library จะรวมอยู่ในไฟล์ binary เลย
+* ถ้าเป็น **dynamic linking** → ไฟล์ binary จะต้องเรียกใช้ `.so` (shared object) จากระบบตอนรัน
+
+ตัวอย่างการตรวจสอบ library ที่ถูก link เข้ากับ executable `osu_latency`:
+
+```bash
+ldd $HOME/app/osu-benchmark/mpi/pt2pt/osu_latency
+```
+
+ผลลัพธ์จะเป็นรายการไฟล์ `.so` พร้อม path และตำแหน่งบนระบบ เช่น:
+
+```
+libmpi_cray.so.12 => /opt/cray/pe/mpich/8.1.32/ofi/crayclang/17.0/lib/libmpi_cray.so.12 (0x00007f.....)
+libgcc_s.so.1 => /lib64/libgcc_s.so.1 (0x00007.......)
+...
+```
+
+ความหมายคือ เมื่อรัน `./osu_latency` ไฟล์หรือไลบรารี่เหล่านี้จะถูกโหลดเข้ามาใช้งานทุกครั้งที่ executable file นี้รัน
+
+---
+
+### 3. รันทดสอบ benchmark แบบง่าย
+
+เพื่อยืนยันว่า binary ใช้งานได้และ MPI ทำงานปกติ สามารถรันตัวอย่างเช่น **latency test**:
+
+```bash
+srun -np 2 $HOME/app/osu-benchmark/mpi/pt2pt/osu_latency
+```
+
+ถ้า build และ environment ถูกต้อง จะได้ผลลัพธ์ลักษณะนี้:
+
+```
+# OSU MPI Latency Test v7.5
+# Datatype: MPI_CHAR.
+# Size       Avg Latency(us)
+1                       0.28
+2                       0.28
+4                       0.30
+8                       0.28
+16                      0.28
+32                      0.30
+64                      0.33
+128                     0.34
+...
+```
+
+
+นั่นแปลว่าการติดตั้งสมบูรณ์และสามารถใช้งาน benchmark ต่อไปได้ หากต้องการ benchmark เพิ่มเติม แนะนำให้ใช้คำสั่ง `sinteract` เพื่อเข้าไปยัง compute node เพื่อสั่งรันงาน หรือ สร้าง job script และส่งงานไปรัน
+---
