@@ -195,7 +195,7 @@ mkdir -p $HOME/app
 ll
 ```
 
-เปิดอ่านไฟล์ `README` หรือ `INSTALL` หากมี
+เปิดอ่านไฟล์ `README` หรือ `INSTALL` หากมี เพื่อดูวิธีการติดตั้งและรายละเอียดต่าง ๆ
 ```bash
 cat README
 ```
