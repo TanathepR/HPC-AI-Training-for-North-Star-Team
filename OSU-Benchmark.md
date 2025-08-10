@@ -374,4 +374,4 @@ srun -n 2 $HOME/app/osu-benchmark/mpi/pt2pt/osu_latency
 ลิงค์เพิ่มเติมสำหรับเรียนรู้เกี่ยวกับ Compilation และ Environment Variable บน Linux OS
 1. [Environment Variable in Linux](https://www.geeksforgeeks.org/linux-unix/environment-variables-in-linux-unix/)
 2. [Step of Compilation from medium](https://medium.com/@3681/steps-of-compilation-5c02935a3904)
-3. [Understanding C program Compilation Process from Youtube](https://www.youtube.com/watch?v=VDslRumKvRA)
+3. [Understanding C program Compilation Process from Youtube](https://www.youtube.com/watch?v=VDslRumKvRA) หรือ [Compiling, assembling, and linking](https://youtu.be/N2y6csonII4?si=xcHoLJMfIC-xQXCK)
