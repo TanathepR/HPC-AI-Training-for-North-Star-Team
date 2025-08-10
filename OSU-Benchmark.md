@@ -111,7 +111,7 @@ make install
 * `cmake` เป็นเครื่องมือสำหรับ generate ไฟล์ build (เช่น Makefile หรือ Ninja)
 * สามารถกำหนด options ได้ด้วย -D เช่น `-DCMAKE_INSTALL_PREFIX` สำหรับตำแหน่งติดตั้ง
 * `-DCMAKE_INSTALL_PREFIX` ใช้กำหนด path สำหรับติดตั้ง
-* สามารถดู option ต่าง ๆ สำหรับ Software นั้นได้ที่ website เกี่ยวกับ Installation เช่น https://hoomd-blue.readthedocs.io/en/v5.3.1/building.html#configure
+* สามารถดู option ต่าง ๆ นั้นได้ที่ website ของ software นั้น เกี่ยวกับ Installation ตัวอย่างเช่น https://hoomd-blue.readthedocs.io/en/v5.3.1/building.html#configure
 
 ---
 
